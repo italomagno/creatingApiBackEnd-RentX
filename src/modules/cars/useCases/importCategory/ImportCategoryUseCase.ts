@@ -2,6 +2,7 @@ import fs from "fs"
 import {parse as csvParse} from "csv-parse"
 
 import { ICategoriesRepository } from "../../repositories/ICategoriesRepository"
+import { Category } from "../../model/Category"
 
 
 interface IImportCategory{
@@ -39,7 +40,16 @@ return new Promise((resolve,reject)=>{
 
 async execute(file: Express.Multer.File): Promise<void>{
   const categories = await this.loadCategories(file)
-  console.log(categories)
+  categories.map(async (category)=>{
+    const {name,description} = category;
+    const existCategory = this.categoriesRepository.findByName(name)
+    if(!existCategory){
+      this.categoriesRepository.create({
+        name,
+        description
+      })
+    }
+  })
 }
 
 }
