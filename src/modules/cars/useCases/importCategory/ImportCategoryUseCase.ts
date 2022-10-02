@@ -1,17 +1,17 @@
 import fs from "fs"
+
 import {parse as csvParse} from "csv-parse"
 
 import { ICategoriesRepository } from "../../repositories/ICategoriesRepository"
-import { Category } from "../../model/Category"
 
 
 interface IImportCategory{
   name: string
   description: string
 }
+
 class ImportCategoryUseCase{
 constructor(private categoriesRepository: ICategoriesRepository){}
-
 
 loadCategories(file: Express.Multer.File): Promise<IImportCategory[]>{
 return new Promise((resolve,reject)=>{
