@@ -1,69 +1,74 @@
 {
   "openapi": "3.0.0",
-  "info":{
+  "info": {
     "title": "RentalX Documentation",
-    "Description":" This is an API Rent",
+    "Description": " This is an API Rent",
     "verson": "1.0.0",
-    "contact":{
+    "contact": {
       "email": "italomagno10@gmail.com"
     }
   },
-  "paths":{
-    "/categories":{
-      "post":{
-        "tags": ["Category"],
+  "paths": {
+    "/categories": {
+      "post": {
+        "tags": [
+          "Category"
+        ],
         "sumary": "Create a category",
         "description": "Create a new category",
-        "requestBody":{
-          "content":{
-            "application/json":{
-              "schema":{
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
                 "type": "object",
-                "properties":{
-                  "name":{
+                "properties": {
+                  "name": {
                     "type": "string"
                   },
-                  "description":{
+                  "description": {
                     "type": "string"
                   }
                 },
-                "example":{
-                  "name":"Category name sample",
+                "example": {
+                  "name": "Category name sample",
                   "description": "Category description sample"
                 }
               }
             }
           }
         },
-        "responses":{
+        "responses": {
           "201": {
             "description": "Created"
           },
-          "500":{
+          "500": {
             "description": "Category already exists"
           }
         }
       },
-      "get":{
-        "tags": ["Category"],
+      "get": {
+        "tags": [
+          "Category"
+        ],
         "sumary": "List all categories",
         "description": "List all categories",
-        "responses":{
-          "200":{
-            "description":"Success",
-            "content":{
-              "application/json":{
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
                 "schema": {
-                  "type":"array",
+                  "type": "array",
                   "items": {
                     "type": "object",
                     "properties": {
-                      "name":{
+                      "name": {
                         "type": "string"
                       },
-                      "description":{
-                        "type":"string"
+                      "description": {
+                        "type": "string"
                       }
+                    }
                   }
                 }
               }
@@ -73,5 +78,4 @@
       }
     }
   }
-}
 }
