@@ -5,9 +5,9 @@ class ListCategoriesUseCase{
 
   constructor(private categoriesRepository: ICategoriesRepository){}
 
-  execute(){
+  async execute(){
 
-    const categories = this.categoriesRepository.list();
+    const categories = await this.categoriesRepository.list();
 
     return categories
   }
