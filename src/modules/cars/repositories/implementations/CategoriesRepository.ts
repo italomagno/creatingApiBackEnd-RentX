@@ -6,9 +6,9 @@ import {getRepository, Repository} from "typeorm"
 
 class CategoriesRepository {
   private repository: Repository<Category>
-  private categories: Category[];
+ // private categories: Category[];
 
-  private static INSTANCE : CategoriesRepository;
+ // private static INSTANCE : CategoriesRepository;
 
 
  constructor()
