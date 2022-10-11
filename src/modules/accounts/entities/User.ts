@@ -32,6 +32,9 @@ class User {
   if(!this.id){
     this.id = uuidV4();
   }
+  if(!this.isAdmin){
+    this.isAdmin = false;
+  }
 }}
 
 export {User}
