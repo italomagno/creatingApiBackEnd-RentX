@@ -9,8 +9,6 @@ class User {
   @Column()
   name: string;
 
-  @Column()
-  username: string;
 
   @Column()
   email: string;
@@ -35,6 +33,7 @@ class User {
   if(!this.isAdmin){
     this.isAdmin = false;
   }
+
 }}
 
 export {User}
