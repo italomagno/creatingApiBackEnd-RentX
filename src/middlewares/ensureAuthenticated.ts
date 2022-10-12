@@ -23,6 +23,10 @@ export async function ensureAuthenticated(request:Request,response:Response,next
          
       if(!user) throw new AppError("User not found",401);
 
+      request.user = {
+        id: user_id
+      }
+
       next()
 
 
