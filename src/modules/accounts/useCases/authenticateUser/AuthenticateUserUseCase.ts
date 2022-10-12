@@ -39,9 +39,10 @@ async execute({email,password}: IRequest): Promise<IResponse>{
   
   // senha está correta
   if(!passwordMatch)
-    throw new Error("Email or password incorrect");
-
-
+  throw new Error("Email or password incorrect");
+  
+  
+  // gerar o jsonweb token
     const token = sign({
     },"019acc25a4e242bb55ad489832ada12d",{
       subject: user.id,
@@ -59,7 +60,6 @@ async execute({email,password}: IRequest): Promise<IResponse>{
     return tokenReturn
 
 
-// gerar o jsonweb token
 }
 
 }
