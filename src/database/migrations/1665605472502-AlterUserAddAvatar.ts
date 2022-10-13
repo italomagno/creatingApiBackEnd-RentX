@@ -7,7 +7,7 @@ export class AlterUserAddAvatar1665605472502 implements MigrationInterface {
       new TableColumn({
           name: "avatar",
           type: "varchar",
-        isNullable:true
+          isNullable: true
       }))
     }
 
