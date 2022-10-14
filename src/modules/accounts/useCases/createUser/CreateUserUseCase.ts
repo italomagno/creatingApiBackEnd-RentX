@@ -1,12 +1,12 @@
+import { AppError } from "@errors/AppError";
+import { ICreatedUserDTO } from "@modules/accounts/dtos/ICreaterUserDTO";
+import { IUsersRepository } from "@modules/accounts/repositories/IUsersRepository";
+import { hash } from "bcryptjs";
 import "reflect-metadata"
 
 import { inject, injectable } from "tsyringe";
 
-import { ICreatedUserDTO } from "../../dtos/ICreaterUserDTO";
-import { IUsersRepository } from "../../repositories/IUsersRepository";
 
-import { hash } from 'bcryptjs'
-import { AppError } from "../../../../errors/AppError";
 
 
 
