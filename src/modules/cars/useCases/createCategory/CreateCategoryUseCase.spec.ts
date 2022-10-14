@@ -1,6 +1,6 @@
 
 import { AppError } from "@shared/errors/AppError";
-import { CategoriesRepositoryInMemory } from "../../repositories/implementations/in-memory/CategoriesRepositoryInMemory";
+import { CategoriesRepositoryInMemory } from "../../repositories/in-memory/CategoriesRepositoryInMemory";
 import { CreateCategoryUseCase } from "./CreateCategoryUseCase";
 
 

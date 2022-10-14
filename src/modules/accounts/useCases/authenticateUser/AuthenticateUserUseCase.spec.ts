@@ -1,6 +1,6 @@
 import "reflect-metadata"
 import { AuthenticateUserUseCase } from "./AuthenticateUserUseCase";
-import { UsersRepositoryInMemory } from "../../repositories/implementations/in-memory/UsersRepositoryInMemory";
+import { UsersRepositoryInMemory } from "../../repositories/in-memory/UsersRepositoryInMemory";
 import { CreateUserUseCase } from "../createUser/CreateUserUseCase";
 import { ICreatedUserDTO } from "../../dtos/ICreaterUserDTO";
 import { AppError } from "@shared/errors/AppError";
