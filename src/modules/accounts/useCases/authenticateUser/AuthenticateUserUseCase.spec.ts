@@ -1,16 +1,16 @@
 import "reflect-metadata"
 import { AuthenticateUserUseCase } from "./AuthenticateUserUseCase";
-import{UsersRepositoryInMemory} from "../../repositories/implementations/in-memory/UsersRepositoryInMemory";
+import { UsersRepositoryInMemory } from "../../repositories/implementations/in-memory/UsersRepositoryInMemory";
 import { CreateUserUseCase } from "../createUser/CreateUserUseCase";
 import { ICreatedUserDTO } from "../../dtos/ICreaterUserDTO";
-import { AppError } from "@errors/AppError";
+import { AppError } from "@shared/errors/AppError";
 
 
 let authenticateUserUseCase: AuthenticateUserUseCase;
 let usersRepositoryInMemory: UsersRepositoryInMemory;
 let createUserUseCase: CreateUserUseCase;
 
-describe("Authenticate User",() => {
+describe("Authenticate User", () => {
   beforeEach(() => {
     usersRepositoryInMemory = new UsersRepositoryInMemory();
 
@@ -19,7 +19,7 @@ describe("Authenticate User",() => {
     createUserUseCase = new CreateUserUseCase(usersRepositoryInMemory);
   });
   it("Should be able to authenticate an user", async () => {
-    const user: ICreatedUserDTO = {  
+    const user: ICreatedUserDTO = {
       driver_license: "Apache License 2.0",
       email: "user@example.com",
       name: "user",
@@ -28,7 +28,7 @@ describe("Authenticate User",() => {
 
     await createUserUseCase.execute(user);
 
-   const result = await authenticateUserUseCase.execute({
+    const result = await authenticateUserUseCase.execute({
       email: user.email,
       password: user.password,
     })
@@ -38,7 +38,7 @@ describe("Authenticate User",() => {
   })
 
   it("Should not be able to authenticate an noexistent user", () => {
-    expect(async () =>{
+    expect(async () => {
       await authenticateUserUseCase.execute({
         email: "false@example.com",
         password: "12user.password",
@@ -46,19 +46,19 @@ describe("Authenticate User",() => {
     }).rejects.toBeInstanceOf(AppError);
   })
   it("Should not be able to authenticate an invalid password", () => {
-    expect(async () =>{
+    expect(async () => {
       const user: ICreatedUserDTO = {
         driver_license: '9999',
         email: "usetestr@example.com",
         name: "usertest",
         password: "passwordtest"
       }
-    await createUserUseCase.execute(user);
+      await createUserUseCase.execute(user);
 
-    await authenticateUserUseCase.execute({
-      email: user.email,
-      password: "incorrectPasswordsTest",
-    })
+      await authenticateUserUseCase.execute({
+        email: user.email,
+        password: "incorrectPasswordsTest",
+      })
     }).rejects.toBeInstanceOf(AppError)
   })
 })
