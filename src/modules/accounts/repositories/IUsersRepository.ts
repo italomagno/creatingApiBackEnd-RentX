@@ -1,3 +1,4 @@
+import "reflect-metadata"
 import { ICreatedUserDTO } from "../dtos/ICreaterUserDTO"
 import { User } from "../entities/User"
 
