@@ -13,6 +13,7 @@ import { CarsRepository } from "@modules/cars/infra/typeorm/repositories/CarsRep
 
 
 
+
 container.registerSingleton<ICategoriesRepository>(
   "CategoriesRepository",
   CategoriesRepository
