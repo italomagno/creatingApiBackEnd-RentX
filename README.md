@@ -14,13 +14,12 @@ bando de dados, bibliotecas utilizadas, algo relacionado a email, etc.
 # Cadastro de carro
 
 **RF**
-[] Deve ser possível cadastrar um novo carro.
+[x] Deve ser possível cadastrar um novo carro.
 
 **RN**
-[] Não deve ser possível cadastrar um carro com uma placa já cadastrada.
-[] Não deve ser possível alterar a placa de um carro já cadastrado.
-[] O carro deve ser cadastrado com disponibilidade por padrão, com dispobilidade.
-[] O usuário responsável pelo cadastro dve ser um usuário administrador.
+[x] Não deve ser possível cadastrar um carro com uma placa já cadastrada.
+[x] O carro deve ser cadastrado com disponibilidade por padrão, com dispobilidade.
+* [] O usuário responsável pelo cadastro dve ser um usuário administrador.
 
 # Listagem de carros
 

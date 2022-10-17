@@ -13,8 +13,9 @@ class ImportCategoryController{
 
 
   handle(request: Request, response: Response): Response{
+    const {file} = request
 
-    const {file} = request;
+  
     const importCategoryUseCase = container.resolve(ImportCategoryUseCase)
 
     importCategoryUseCase.execute(file)
