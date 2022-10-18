@@ -19,16 +19,15 @@ bando de dados, bibliotecas utilizadas, algo relacionado a email, etc.
 **RN**
 [x] Não deve ser possível cadastrar um carro com uma placa já cadastrada.
 [x] O carro deve ser cadastrado com disponibilidade por padrão, com dispobilidade.
-* [] O usuário responsável pelo cadastro dve ser um usuário administrador.
+[x] O usuário responsável pelo cadastro dve ser um usuário administrador.
 
 # Listagem de carros
 
 **RF**
-[] Deve ser possível listar todos os carros disponíveis.
-[] Deve ser possível listarr todos os carros disponíveis pelo nome da categoria.
-[] Deve ser possível listarr todos os carros disponíveis pelo nome nome da marca.
-[] Deve ser possível listarr todos os carros disponíveis pelo nome nome do carro.
-
+[x] Deve ser possível listar todos os carros disponíveis.
+[x] Deve ser possível listarr todos os carros disponíveis pelo nome da categoria.
+[x] Deve ser possível listarr todos os carros disponíveis pelo nome nome da marca.
+[x] Deve ser possível listarr todos os carros disponíveis pelo nome nome do carro.
 
 
 **RN**

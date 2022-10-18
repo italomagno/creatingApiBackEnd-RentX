@@ -60,7 +60,6 @@ describe("Create Car", ()=>{
         license_plate: "ABC-1244",
          name:"Name Car Available" 
     });
-    console.log(car)
     expect(car.available).toBe(true);
   })
 })
