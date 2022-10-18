@@ -31,18 +31,18 @@ bando de dados, bibliotecas utilizadas, algo relacionado a email, etc.
 
 
 **RN**
-[] O usuário não precisa estar logado no sistema.
+[x] O usuário não precisa estar logado no sistema.
 
 
 # Cadastro de Especificação no carro
 
 **RF**
-[] Deve ser possível cadastrar uma especificação para um carro.
+[x] Deve ser possível cadastrar uma especificação para um carro.
 
 
 **RN**
-[] Não deve ser possível cadastrar uma especificação para um carro não cadastrado.
-[] Não deve ser possível cadastrar uma especificação já existente para o mesmo carro.
+[x] Não deve ser possível cadastrar uma especificação para um carro não cadastrado.
+[x] Não deve ser possível cadastrar uma especificação já existente para o mesmo carro.
 [x] O usuário responsável pelo cadastro dve ser um usuário administrador.
 
 # Cadastro de imagens do carro
