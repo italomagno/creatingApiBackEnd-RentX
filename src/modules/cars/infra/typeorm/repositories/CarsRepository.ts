@@ -5,13 +5,14 @@ import { Car } from "../entities/Car";
 
 
 class CarsRepository implements ICarsRepository{
-
+  
   private repository: Repository<Car>;
 
   constructor(
   ){
     this.repository = getRepository(Car)
   }
+ 
   
 
   async create({
@@ -57,6 +58,10 @@ class CarsRepository implements ICarsRepository{
 
    return cars;  
 
+  }
+
+  findById(id: string): Promise<Car> {
+    throw new Error("Method not implemented.");
   }
 }
 
