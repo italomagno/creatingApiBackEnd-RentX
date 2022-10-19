@@ -13,7 +13,7 @@ let connection: Connection;
 describe("Create category controller", () => {
   
   beforeAll(async () =>{
-    const connection = await createConnection("localhost")
+     connection = await createConnection("localhost")
 
     await connection.runMigrations();
     const id = uuidV4();
@@ -26,11 +26,7 @@ describe("Create category controller", () => {
       );
   })
 
-  afterAll(async () => {
-    await connection.dropDatabase();
-    await connection.close(); 
 
-  });
 
   it("should be able to create a new category", async () => {
 
@@ -51,8 +47,17 @@ describe("Create category controller", () => {
     Authorization: `Bearer ${token}`
   })
 
+
+
   expect(response.status).toBe(201)
   })
+
+
+  afterAll(async () => {
+    await connection.dropDatabase();
+    await connection.close(); 
+
+  });
 
 
 })
