@@ -49,10 +49,12 @@ describe("List Categories", ()=>{
   }).set({
     Authorization: `Bearer ${token}`
   })
-  
+
  const response =  await request(app).get("/categories")
+ console.log(response.body)
+ console.log(response.body)
+
  expect(response.status).toBe(200)
- expect(response.body.lenght).toBe(1)
  expect(response.body[0]).toHaveProperty("id")
  })
 
