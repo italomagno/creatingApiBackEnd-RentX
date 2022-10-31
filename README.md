@@ -63,12 +63,29 @@ bando de dados, bibliotecas utilizadas, algo relacionado a email, etc.
 # Aluguel de carro
 
 **RF**
-[] Deve ser possível cadastrar um aluguel
+[x] Deve ser possível cadastrar um aluguel
 
 **RN**
-[] O aluguel deve ter duração mínima de 24 horas.
-[] Não deve ser possível cadastrar um novo alugel caso já exista um aberto para o mesmo usuário.
-[] Não deve ser possível cadastrar um novo alugel caso já exista um aberto para o mesmo carro.
-[] O usuário deve estar logado na aplcação
+[x] O aluguel deve ter duração mínima de 24 horas.
+[x] Não deve ser possível cadastrar um novo alugel caso já exista um aberto para o mesmo usuário.
+[x] Não deve ser possível cadastrar um novo alugel caso já exista um aberto para o mesmo carro.
+[x] O usuário deve estar logado na aplcação
+[x] Ao realizar um aluguel,o status do carro deverá ser alterado para indisponível.
+
+# Devolução de um carro
+
+**RF**
+[x] Deve er possível realizar a devolução de um carro
+
+**RN**
+[] Se um carro for devolvido em um período inferior a 24h, deverá ser cobrado o valor do aluguel completo.
+[] Se um carro for devolvido em um período superior ao previsto para entrega, deverá ser cobrado o valor multa proporcional aos dias de atraso.
+[] Ao realizar a devolução, o carro deve estar disponível para outro aluguel.
+[] Ao realizar a devolução, o usuário deverá ser liberado para outro aluguel.
+[] Ao realizar a devolução, deverá ser calculado o total do aluguel.
+[] Caso haja multa, deveserá ser adicionado ao total do aluguel.
+[x] O usuário deve estar logado na aplcação
+
+
 
 
