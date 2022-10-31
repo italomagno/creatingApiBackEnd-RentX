@@ -34,6 +34,7 @@ class CreateRentalUseCase {
     /*
       [x] Não deve ser possível cadastrar um novo alugel caso já exista um aberto para o mesmo carro. */
     const carUnavailable = await this.rentalsRepository.findOpenRentalByCar(car_id)
+    console.log(carUnavailable)
 
     if (carUnavailable) {
       throw new AppError("Car is not available")

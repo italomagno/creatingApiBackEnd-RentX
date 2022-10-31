@@ -34,7 +34,7 @@ class Rental{
 
    constructor()
 {
-  if(!this.car_id) this.id = uuidV4()
+  if(!this.id) this.id = uuidV4()
 }
 
 
