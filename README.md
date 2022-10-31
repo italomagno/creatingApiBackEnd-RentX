@@ -78,14 +78,20 @@ bando de dados, bibliotecas utilizadas, algo relacionado a email, etc.
 [x] Deve er possível realizar a devolução de um carro
 
 **RN**
-[] Se um carro for devolvido em um período inferior a 24h, deverá ser cobrado o valor do aluguel completo.
-[] Se um carro for devolvido em um período superior ao previsto para entrega, deverá ser cobrado o valor multa proporcional aos dias de atraso.
-[] Ao realizar a devolução, o carro deve estar disponível para outro aluguel.
-[] Ao realizar a devolução, o usuário deverá ser liberado para outro aluguel.
-[] Ao realizar a devolução, deverá ser calculado o total do aluguel.
-[] Caso haja multa, deveserá ser adicionado ao total do aluguel.
+[x] Se um carro for devolvido em um período inferior a 24h, deverá ser cobrado o valor do aluguel completo.
+[x] Se um carro for devolvido em um período superior ao previsto para entrega, deverá ser cobrado o valor multa proporcional aos dias de atraso.
+[x] Ao realizar a devolução, o carro deve estar disponível para outro aluguel.
+[x] Ao realizar a devolução, o usuário deverá ser liberado para outro aluguel.
+[x] Ao realizar a devolução, deverá ser calculado o total do aluguel.
+[x] Caso haja multa, deveserá ser adicionado ao total do aluguel.
 [x] O usuário deve estar logado na aplcação
 
 
+# Listagem de Alugueis para usuário
 
+**RF**
+[x] Deve ser possível realizar a busca de todos os alugueis para o usuário
+
+**RN**
+O usuário deve estar logado na aplicação
 
