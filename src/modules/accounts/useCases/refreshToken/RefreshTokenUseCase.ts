@@ -5,7 +5,7 @@ import { IUsersTokensRepository } from '@modules/accounts/repositories/IUsersTok
 import { IDateProvider } from '@shared/container/providers/DateProvider/IDateProvider';
 import { AppError } from '@shared/errors/AppError';
 import {sign, verify} from 'jsonwebtoken'; 
-import { inject } from 'tsyringe';
+import { inject, injectable } from 'tsyringe';
 
 
 interface IPayload{
@@ -13,6 +13,7 @@ interface IPayload{
   email: string;
 }
 
+@injectable()
 class RefreshTokenUseCase{
   constructor(
     @inject("UsersTokensRepository")
