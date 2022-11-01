@@ -2,7 +2,7 @@
 
 interface ICreaterUserTokenDTO{
   user_id: string;
-  expired_date: string;
+  expires_date: Date;
   refresh_token: string;
 }
 
