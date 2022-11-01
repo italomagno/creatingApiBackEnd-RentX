@@ -2,7 +2,7 @@ import "reflect-metadata"
 import { AuthenticateUserUseCase } from "./AuthenticateUserUseCase";
 import { UsersRepositoryInMemory } from "../../repositories/in-memory/UsersRepositoryInMemory";
 import { CreateUserUseCase } from "../createUser/CreateUserUseCase";
-import { ICreatedUserDTO } from "../../dtos/ICreaterUserDTO";
+import { ICreatedUserDTO } from "../../dtos/ICreaterUserTokenDTO";
 import { AppError } from "@shared/errors/AppError";
 
 
@@ -38,13 +38,13 @@ describe("Authenticate User", () => {
   })
 
   it("Should not be able to authenticate an noexistent user", async () => {
-   await expect(authenticateUserUseCase.execute({
-        email: "false@example.com",
-        password: "12user.password",
-      })
+    await expect(authenticateUserUseCase.execute({
+      email: "false@example.com",
+      password: "12user.password",
+    })
     ).rejects.toEqual(new AppError("Email or password incorrect"))
   })
-  it("Should not be able to authenticate an invalid password",async () => {
+  it("Should not be able to authenticate an invalid password", async () => {
     const user: ICreatedUserDTO = {
       driver_license: '9999',
       email: "usetestr@example.com",
@@ -52,10 +52,10 @@ describe("Authenticate User", () => {
       password: "passwordtest"
     }
     await createUserUseCase.execute(user);
-   await expect(authenticateUserUseCase.execute({
-        email: user.email,
-        password: "incorrectPasswordsTest",
-      })
+    await expect(authenticateUserUseCase.execute({
+      email: user.email,
+      password: "incorrectPasswordsTest",
+    })
     ).rejects.toEqual(new AppError("Email or password incorrect"))
   })
 })
