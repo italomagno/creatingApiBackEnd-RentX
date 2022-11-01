@@ -13,7 +13,7 @@ let connection: Connection;
 describe("List Categories", ()=>{
 
   beforeAll(async () =>{
-    connection = await createConnection("localhost")
+    connection = await createConnection('127.0.0.1')
 
    await connection.runMigrations();
    const id = uuidV4();
@@ -51,8 +51,6 @@ describe("List Categories", ()=>{
   })
 
  const response =  await request(app).get("/categories")
- console.log(response.body)
- console.log(response.body)
 
  expect(response.status).toBe(200)
  expect(response.body[0]).toHaveProperty("id")
