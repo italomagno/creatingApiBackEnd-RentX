@@ -13,7 +13,7 @@ let connection: Connection;
 describe("Create category controller", () => {
   
   beforeAll(async () =>{
-     connection = await createConnection('127.0.0.1')
+     connection = await createConnection()
 
     await connection.runMigrations();
     const id = uuidV4();
