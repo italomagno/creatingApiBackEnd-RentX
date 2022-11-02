@@ -27,7 +27,10 @@ describe("List Categories", ()=>{
 
  
  afterAll(async () => {
-  await connection.dropDatabase()
+  
+  await connection.dropDatabase();
+
+
   await connection.close(); 
 
 });
